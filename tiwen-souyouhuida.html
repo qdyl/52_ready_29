@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no,initial-scale=1">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/reset-init.css">
+    <link rel="stylesheet" href="css/page-styles.css">
+</head>
+<body>
+<header id="search-quiz">
+    <div class="search-quiz-content bor-radius-4px">
+        <i class="search-icon back-left-arrow" onclick="history.go(-1)"></i>
+        <div class="serach-input11 inline-block"> <input type="text"  placeholder="请输入您感兴趣的内容"></div>
+    </div>
+</header>
+<div class="height-50"></div>
+<section id="tiwen-suoyouhuida">
+    <div class="fabu-top">
+        <div class="tags"><span>语文</span><span>数学</span></div>
+        <h4>有哪些冷门却好用的东西可以网购？</h4>
+        <p class="fabu-top-text more-2ellipsis">
+            和同事吃饭遇见旁边的两位大姐要报警。和同事吃饭遇见旁边的两位大姐要报警由于我俩就是警察，店家也认识，就喊了我们一…
+            和同事吃饭遇见旁边的两位大姐要报警。由于我俩就是警察，店家也认识，就喊了我们一…
+            <span class="accordion-panel-span-wrap"><span class="accordion-panel">....展开问题描述</span><i class="accordion-icon"></i></span>
+        </p>
+        <div class="attention-numbers clearfix-zl"><span class="numbers fl">1人关注</span><span class="care-question fr">+ 关注问题</span></div>
+        <div class="interview-answer clearfix-zl">
+            <div class="interview fl"><a href="tiwen-gengduoyaoqingren.html"><i class="inter-icon"></i><span>邀请回答</span></a></div>
+            <div class="add-answer fl"><a href="tiwen-xiehuida.html"><i class="answer-icon"></i><span>添加回答</span></a></div>
+        </div>
+        <div class="numbers-of-reply">4499个回答</div>
+    </div>
+    <ul class="main-items ">
+        <li class="main-item">
+            <a href="tiwen-guanzhu-one-answer.html">
+                <div class="item-top clearfix-zl">
+                    <i class="user-icon fl"></i>
+                    <span class="fl">长不大回答了问题</span>
+                    <span class="fr">2018-01-01</span>
+                </div>
+                <h4>有哪些令人浑身发抖的故事？</h4>
+                <!--只有文本-->
+                <div class="all-text">
+                    <p class="more-4ellipsis">脸淑：以下是我跟一位将近70岁的皮肤科教授学的保养术，希望我们都能活到老，精致到老！最近脸上忽然冒了一些闭口，想去做个针清，在朋友的介绍下认识了这位将近70岁我跟一位将近70岁的皮肤科教授学的保养术，希望我们都能...</p>
+                </div>
+                <div class="item-bottom">
+                    <span>100赞同</span><span>100评论</span>
+                </div>
+            </a>
+        </li>
+        <li class="main-item">
+            <a href="tiwen-guanzhu-one-answer.html">
+                <div class="item-top clearfix-zl">
+                    <i class="user-icon fl"></i>
+                    <span class="fl">长不大回答了问题</span>
+                    <span class="fr">2018-01-01</span>
+                </div>
+                <h4>有哪些令人浑身发抖的故事？</h4>
+                <!--只有文本-->
+                <div class="all-text">
+                    <p class="more-4ellipsis">脸淑：以下是我跟一位将近70岁的皮肤科教授学的保养术，希望我们都能活到老，精致到老！最近脸上忽然冒了一些闭口，想去做个针清，在朋友的介绍下认识了这位将近70岁我跟一位将近70岁的皮肤科教授学的保养术，希望我们都能...</p>
+                </div>
+                <div class="item-bottom">
+                    <span>100赞同</span><span>100评论</span>
+                </div>
+            </a>
+        </li>
+        <li class="main-item">
+            <a href="tiwen-guanzhu-one-answer.html">
+                <div class="item-top clearfix-zl">
+                    <i class="user-icon fl"></i>
+                    <span class="fl">长不大回答了问题</span>
+                    <span class="fr">2018-01-01</span>
+                </div>
+                <h4>有哪些令人浑身发抖的故事？</h4>
+                <!--只有文本-->
+                <div class="all-text">
+                    <p class="more-4ellipsis">脸淑：以下是我跟一位将近70岁的皮肤科教授学的保养术，希望我们都能活到老，精致到老！最近脸上忽然冒了一些闭口，想去做个针清，在朋友的介绍下认识了这位将近70岁我跟一位将近70岁的皮肤科教授学的保养术，希望我们都能...</p>
+                </div>
+                <div class="item-bottom">
+                    <span>100赞同</span><span>100评论</span>
+                </div>
+            </a>
+        </li>
+    </ul>
+
+</section>
+<div class="popup-already-invite popup-center">
+    <span>您已经邀请了!</span>
+</div>
+
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+<script>
+    $(function () {
+        // 动态设置"yonghu-lists",的高度
+        let offHeight = $(".yonghu-list:first").innerHeight()*5;
+        $(".yonghu-lists").height(offHeight);
+
+        // 点击"展开问题描述"
+        $(".accordion-panel").on("click",function () {
+            $(".fabu-top-text").toggleClass("more-2ellipsis");
+            $(".accordion-icon").toggleClass("rotate");
+            let text = $(this).text() === "....展开问题描述" ? "折叠显示":"....展开问题描述";
+            $(this).text(text);
+
+        });
+
+        // 关注问题
+        $(".care-question").on('click', function(event) {
+            event.preventDefault();
+            if($(this).text() === "已关注"){
+                $(".popup-already-invite").fadeIn(1000).fadeOut(3500);
+            }
+            $(this).addClass("care-active").text("已关注");
+        });
+    })
+</script>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no,initial-scale=1">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/reset-init.css">
+    <link rel="stylesheet" href="css/page-styles.css">
+</head>
+<body>
+<header id="search-quiz">
+    <div class="search-quiz-content bor-radius-4px">
+        <i class="search-icon back-left-arrow" onclick="history.go(-1)"></i>
+        <div class="serach-input11 inline-block"> <input type="text"  placeholder="请输入您感兴趣的内容"></div>
+    </div>
+</header>
+<div class="height-50"></div>
+<section id="tiwen-guanzhu-one-answer">
+    <div class="fabu-top">
+        <div class="tags"><span>语文</span><span>数学</span></div>
+        <h4>有哪些冷门却好用的东西可以网购？</h4>
+        <div class="attention-numbers clearfix-zl">
+            <span class="numbers fl"><a href="tiwen-xiehuida.html"><i class="xiehuida-icon"></i>写回答</a></span>
+            <span class="care-question fr"><a href="tiwen-quanbupinglun.html">查看全部10000个回答</a></span>
+        </div>
+    </div>
+    <div class="yonghu-lists">
+        <div class="yonghu-list clearfix-zl">
+            <div class="text-and-icon fl">
+                <i class="yonghu-icon"></i>
+                <div class="h4-span fl">
+                    <h4>孔三涮</h4>
+                    <span>500回答</span><span>899000关注</span>
+                    <span class="add-attention  fr">+ 关注</span>
+                </div>
+            </div>
+        </div>
+        <p>
+            和同事吃饭遇见旁边的两位大姐要报警。由于我俩就是警察，店家也认识，就喊了我们。两位姐姐报警的原因是，小份的汤饭面太多，素菜里面肉太多。。。。口音因该是包邮区的大姐，要的汤饭，其实对新疆人来说并不是多大，8寸左右的碗，7公分左右的深度，大半碗的面，新疆的食物一般都很扎实。然后3个素菜，韭菜炒肉，芹菜炒肉，油麦菜。
+        </p>
+        <p>
+            大姐问菜的时候说的是有啥素菜，店员的回答是韭菜芹菜油麦菜，两位大姐就说都要。对我一个新疆小伙来说，没错呀，3个素菜2份汤饭。。。这个大姐告诉我们，她被骗了，说的素菜，为什么这么多肉，而且面那么多。我只能耐心的告诉她，没多收你钱吧，你按照你的食量吃，下次少点一点。她一开始不服。遂我的干煸炒面上来。15寸的盘子冒尖一盘。我同事的拌面上来了。一样。。这个大姐当时以不相信的眼神看我吃完炒面。来确定我这个当警察的没骗她。。。我走的时候大姐说了一句，你要是我儿子，家里房子都要让你吃没的吧呦。
+        </p>
+    </div>
+    <div class="comments-all">
+        <div class="comment-title clearfix-zl">
+            <span class="fl">评论</span>
+            <span class="fr"><a href="tiwen-quanbupinglun.html">全部评论</a></span>
+        </div>
+        <ul class="comment-lists">
+            <li class="comment-list ">
+                <div class="text-and-icon clearfix-zl">
+                    <i class="yonghu-icon fl"></i>
+                    <div class="h4-span fr">
+                        <div class="clearfix-zl">
+                            <span class="name fl">醉清风</span><span class="time fr">2018-12-31</span>
+                        </div>
+                        <p>
+                            只是当时佐料太少了，连盐都还买不起，放到现在，只怕是一只都不剩。
+                        </p>
+                    </div>
+
+                </div>
+            </li>
+            <li class="comment-list ">
+                <div class="text-and-icon clearfix-zl">
+                    <i class="yonghu-icon fl"></i>
+                    <div class="h4-span fr">
+                        <div class="clearfix-zl">
+                            <span class="name fl">醉清风</span><span class="time fr">2018-12-31</span>
+                        </div>
+                        <p>
+                            只是当时佐料太少了，连盐都还买不起，放到现在，只怕是一只都不剩。
+                        </p>
+                    </div>
+
+                </div>
+            </li>
+        </ul>
+        <form action="##" class="clearfix-zl">
+            <textarea class="textarea" name="" id="" cols="30" rows="10"></textarea>
+            <input class="input fr" type="submit" value="发布">
+        </form>
+    </div>
+</section>
+
+<div class="footer-fixed-controls">
+    <ul class="footer-three-controls">
+        <li class="control-item">
+            <i class="control-icon"></i><span>100</span>
+        </li>
+        <li class="control-item">
+            <i class="control-icon"></i><span>100</span>
+        </li>
+        <li class="control-item">
+            <i class="control-icon"></i><span>收藏</span>
+        </li>
+
+    </ul>
+</div>
+
+
+<div class="popup-already-invite popup-center">
+    <span>您已经关注了!</span>
+</div>
+
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+<script>
+    $(function () {
+        $(".add-attention").on('click', function(event) {
+            // 方式1：
+            /*if($(this).text() === "已关注"){
+                $(".popup-already-invite").fadeIn(1000).fadeOut(3500);
+            }
+            $(this).addClass("has-cared").text("已关注");*/
+
+            // 方式2：
+            $(this).toggleClass("has-cared");
+            let text = $(this).text()==="+ 关注" ? "已关注": "+ 关注";
+            $(this).text(text);
+
+        });
+
+        // "点赞"、"评论" 、 "收藏"
+        $(".control-item").on("click",function () {
+            $(this).find(".control-icon").toggleClass("hover");
+        })
+
+    })
+
+</script>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no,initial-scale=1">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/reset-init.css">
+    <link rel="stylesheet" href="css/page-styles.css">
+</head>
+<body>
+<header id="search-quiz">
+    <div class="search-quiz-content bor-radius-4px">
+        <i class="search-icon back-left-arrow" onclick="history.go(-1)"></i>
+        <div class="serach-input11 inline-block"> <input type="text"  placeholder="搜索您想邀请的人"></div>
+    </div>
+</header>
+<div class="height-50"></div>
+<section id="tiwen-fabuchenggong">
+    <div class="fabu-bottom">
+        <ul class="yonghu-lists">
+            <li class="yonghu-list clearfix-zl">
+                <div class="text-and-icon fl">
+                    <i class="yonghu-icon"></i>
+                    <div class="h4-span fl">
+                        <h4>孔三涮</h4>
+                        <span class="add-attention has-cared fr">已邀请</span>
+                    </div>
+                </div>
+            </li>
+            <li class="yonghu-list clearfix-zl">
+                <div class="text-and-icon fl">
+                    <i class="yonghu-icon"></i>
+                    <div class="h4-span fl">
+                        <h4>孔三涮</h4>
+                        <span class="add-attention fr">邀请</span>
+                    </div>
+                </div>
+
+            </li>
+            <li class="yonghu-list clearfix-zl">
+                <div class="text-and-icon fl">
+                    <i class="yonghu-icon"></i>
+                    <div class="h4-span fl">
+                        <h4>孔三涮</h4>
+                        <span class="add-attention fr">邀请</span>
+                    </div>
+                </div>
+
+            </li>
+            <li class="yonghu-list clearfix-zl">
+                <div class="text-and-icon fl">
+                    <i class="yonghu-icon"></i>
+                    <div class="h4-span fl">
+                        <h4>孔三涮</h4>
+                        <span class="add-attention has-cared fr">已邀请</span>
+                    </div>
+                </div>
+            </li>
+            <li class="yonghu-list clearfix-zl">
+                <div class="text-and-icon fl">
+                    <i class="yonghu-icon"></i>
+                    <div class="h4-span fl">
+                        <h4>孔三涮</h4>
+                        <span class="add-attention fr">邀请</span>
+                    </div>
+                </div>
+
+            </li>
+            <li class="yonghu-list clearfix-zl">
+                <div class="text-and-icon fl">
+                    <i class="yonghu-icon"></i>
+                    <div class="h4-span fl">
+                        <h4>孔三涮</h4>
+                        <span class="add-attention fr">邀请</span>
+                    </div>
+                </div>
+
+            </li>
+            <li class="yonghu-list clearfix-zl">
+                <div class="text-and-icon fl">
+                    <i class="yonghu-icon"></i>
+                    <div class="h4-span fl">
+                        <h4>孔三涮</h4>
+                        <span class="add-attention has-cared fr">已邀请</span>
+                    </div>
+                </div>
+            </li>
+            <li class="yonghu-list clearfix-zl">
+                <div class="text-and-icon fl">
+                    <i class="yonghu-icon"></i>
+                    <div class="h4-span fl">
+                        <h4>孔三涮</h4>
+                        <span class="add-attention fr">邀请</span>
+                    </div>
+                </div>
+
+            </li>
+            <li class="yonghu-list clearfix-zl">
+                <div class="text-and-icon fl">
+                    <i class="yonghu-icon"></i>
+                    <div class="h4-span fl">
+                        <h4>孔三涮</h4>
+                        <span class="add-attention fr">邀请</span>
+                    </div>
+                </div>
+
+            </li>
+            <li class="yonghu-list clearfix-zl">
+                <div class="text-and-icon fl">
+                    <i class="yonghu-icon"></i>
+                    <div class="h4-span fl">
+                        <h4>孔三涮</h4>
+                        <span class="add-attention has-cared fr">已邀请</span>
+                    </div>
+                </div>
+            </li>
+            <li class="yonghu-list clearfix-zl">
+                <div class="text-and-icon fl">
+                    <i class="yonghu-icon"></i>
+                    <div class="h4-span fl">
+                        <h4>孔三涮</h4>
+                        <span class="add-attention fr">邀请</span>
+                    </div>
+                </div>
+
+            </li>
+            <li class="yonghu-list clearfix-zl">
+                <div class="text-and-icon fl">
+                    <i class="yonghu-icon"></i>
+                    <div class="h4-span fl">
+                        <h4>孔三涮</h4>
+                        <span class="add-attention fr">邀请</span>
+                    </div>
+                </div>
+
+            </li>
+        </ul>
+    </div>
+</section>
+<div class="popup-already-invite popup-center">
+    <span>您已经邀请了!</span>
+</div>
+
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+<script>
+    $(function () {
+
+
+        // 关注问题
+        $(".care-question").on('click', function(event) {
+            event.preventDefault();
+            if($(this).text() === "已关注"){
+                $(".popup-already-invite").fadeIn(1000).fadeOut(3500);
+            }
+            $(this).addClass("care-active").text("已关注");
+        });
+        // 邀请
+        $(".add-attention").on('click', function(event) {
+            event.preventDefault();
+            if($(this).text() === "已邀请"){
+                $(".popup-already-invite").fadeIn(1000).fadeOut(3500);
+            }
+            $(this).addClass("has-cared").text("已邀请");
+        });
+    })
+
+
+</script>
+</html>
